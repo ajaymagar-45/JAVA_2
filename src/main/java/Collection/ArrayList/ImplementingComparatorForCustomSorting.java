@@ -41,8 +41,8 @@ public class ImplementingComparatorForCustomSorting {
         Collections.sort(list, new AgeComparator());
         Collections.sort(list,new IdComparator());
 
-        for (Student s : list) {
-            System.out.println("Sorting By Student's age: "+ s.id + " " + s.name + " " + s.age);
+        for (Student s2 : list) {
+            System.out.println("Sorting By Student's age: "+ s2.id + " " + s2.name + " " + s2.age);
 
         }
         System.out.println(" *************************************");
