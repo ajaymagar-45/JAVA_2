@@ -24,7 +24,7 @@ public class ComparatorByUsingAnonymous {
         list.add(new Employee(103, "Nitin", 70000));
         list.add(new Employee(161, "Ravi", 50000));
         list.add(new Employee(132, "Amol", 45000));
-        list.add(new Employee(137, "Neeraj", 60000));
+        list.add(new Employee(137, "Viraj", 60000));
 
         Collections.sort(list, new Comparator<Employee>() {
             @Override
