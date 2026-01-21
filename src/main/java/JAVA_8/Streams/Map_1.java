@@ -32,10 +32,16 @@ public class Map_1 {
         System.out.println("Our own custom sorting : "+ownSorting);
         System.out.println();
         System.out.println();
+        
         //By using compareTo method of comparable interface
         List<Integer>dNSO=l.stream().sorted((i1,i2)->i1.compareTo(i2)).collect(Collectors.toList());
         System.out.println("Default natural sorting by using compareTo method of Comparable  interface : "+dNSO);
         List<Integer>reverseOfDNSO=l.stream().sorted((i1,i2)->-i1.compareTo(i2)).collect(Collectors.toList());
+
+
         System.out.println("We will get the reverse output of default natural sorting order by placing a single - symbol : "+ reverseOfDNSO);
+        List<Integer>l5=l.stream().sorted((i1,i2)->i2.compareTo(i1)).collect(Collectors.toList());
+        System.out.println(l5);
+
     }
 }
