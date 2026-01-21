@@ -19,6 +19,7 @@ public class MinMax {
         System.out.println("Insertion order  : " + l);
         int l1=l.stream().sorted().min((i1, i2)->i1.compareTo(i2)).get();
         System.out.println("Minimum in  given list : "+l1);
+
         int l2=l.stream().min((i1,i2)->i2-i1).get();
         System.out.println("Maximum in given list : " + l2);
 
