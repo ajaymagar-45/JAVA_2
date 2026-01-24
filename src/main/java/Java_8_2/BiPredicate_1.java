@@ -1,6 +1,8 @@
 package Java_8_2;
 
+import java.util.Date;
 import java.util.function.BiPredicate;
+import java.util.function.Supplier;
 
 public class BiPredicate_1 {
 
@@ -9,5 +11,7 @@ public class BiPredicate_1 {
 
         BiPredicate<Integer ,Integer> b1=(a,b)->(a+b)%2==0;
         System.out.println(b1.test(10,20));
+
+
     }
 }

@@ -29,7 +29,7 @@ public class Fun_1  {
         BiFunction<Integer,Integer,Integer> bi1=(i1,i2)->(i1+i2)*6;
         System.out.println(bi1.apply(23,45));
 
-        Supplier si=()->"Output by supply";
+        Supplier si=()->100+8899;
         System.out.println(si.get());
 
 
