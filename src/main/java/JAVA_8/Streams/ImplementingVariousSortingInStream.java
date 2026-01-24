@@ -23,6 +23,7 @@ public class ImplementingVariousSortingInStream {
         System.out.println("Default sorting by using copareTo method : "+l1);
         List<Integer> l3=l.stream().sorted().collect(Collectors.toList());
         System.out.println(l3);
+
         List<Integer> l4=l.stream().sorted((i1,i2)->i2-i1).collect(Collectors.toList());
         System.out.println("Custom sorting by using comparator : "+ l4);
 
