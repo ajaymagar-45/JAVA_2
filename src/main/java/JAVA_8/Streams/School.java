@@ -65,7 +65,7 @@ float marks;
         ll.add(new School(119,"Tejas Shinde",'f',64.8f));
         ll.stream().forEach(System.out::print);
 //        System.out.println(no);
-//        ll.stream().sorted(Comparator.comparingInt(School::getRollno).reversed()).collect(Collectors.toList()).forEach(System.out::println);
+        ll.stream().sorted(Comparator.comparing(School::getRollno).reversed()).forEach(System.out::println);
 //        ll.stream().sorted(Comparator.comparing(School::getDivision)).collect(Collectors.toList()).forEach(System.out::println);
     }
 }

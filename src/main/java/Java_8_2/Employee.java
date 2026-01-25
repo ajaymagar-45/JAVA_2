@@ -100,7 +100,6 @@ public class Employee {
         employeeList.add(new Employee(255, "Ali Baig", 23, "Male", "Infrastructure", 2018, 12700.0));
         employeeList.add(new Employee(266, "Sanvi Pandey", 26, "Female", "Product Development", 2015, 28900.0));
         employeeList.add(new Employee(277, "Anuj Chettiar", 31, "Male", "Product Development", 2012, 35700.0));
-        employeeList.add(new Employee(189,"Ajay Magar",22,"Male","Information Technology",2026,75000.0));
 
 //        Map<String, List<Employee>> itEmployees = employeeList.stream().filter(e -> "Sales And Marketing".equals(e.getDepartment())).filter(t->"Male".equals(t.getDepartment())).collect(Collectors.toList());
 
@@ -119,7 +118,19 @@ public class Employee {
 //        System.out.println(li);
 
         //Print all of the above departments
-        employeeList.stream().map(Employee::getDepartment).forEach(System.out::println);
+//        employeeList.stream().map(Employee::getDepartment).forEach(System.out::println);
+        //NoOfMaleAndFemale
+//        Map<String,Long>noOfMaleAndFemale=employeeList.stream().collect(Collectors.groupingBy(Employee::getGender,Collectors.counting()));
+//        System.out.println(noOfMaleAndFemale);
+//
+//        //AverageOfMaleAndFemale
+//        Map<String,Double>avgOfMaleAndFemale=employeeList.stream().collect(Collectors.groupingBy(Employee::getGender,Collectors.averagingInt(Employee::getAge)));
+//        System.out.println(avgOfMaleAndFemale);
+//        employeeList.stream().map(Employee::getSalary ).filter(i-> i>22000.0).sorted().collect(Collectors.toList()).forEach(System.out::println);
+      Map<String,Double> avgSalary=employeeList.stream().collect(Collectors.groupingBy(Employee::getGender,Collectors.averagingDouble(Employee::getSalary)));
+        System.out.println(avgSalary);
+
+
 
     }
 }
