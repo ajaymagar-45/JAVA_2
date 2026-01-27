@@ -1,8 +1,8 @@
 package Java_8_2;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import JAVA_8.In;
+
+import java.util.*;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
@@ -101,9 +101,9 @@ public class Employee {
         employeeList.add(new Employee(266, "Sanvi Pandey", 26, "Female", "Product Development", 2015, 28900.0));
         employeeList.add(new Employee(277, "Anuj Chettiar", 31, "Male", "Product Development", 2012, 35700.0));
 
-//        Map<String, List<Employee>> itEmployees = employeeList.stream().filter(e -> "Sales And Marketing".equals(e.getDepartment())).filter(t->"Male".equals(t.getDepartment())).collect(Collectors.toList());
+//      Map<String, List<Employee>> itEmployees = employeeList.stream().filter(e -> "Sales And Marketing".equals(e.getDepartment())).filter(t->"Male".equals(t.getDepartment())).collect(Collectors.toList());
 
-       // System.out.println(itEmployees);
+//      System.out.println(itEmployees);
 
 //        employeeList.stream().filter(a->a.getDepartment().
 //                equals("Sales And Marketing") && a.getGender().equals("Male")).
@@ -118,18 +118,40 @@ public class Employee {
 //        System.out.println(li);
 
         //Print all of the above departments
+
 //        employeeList.stream().map(Employee::getDepartment).forEach(System.out::println);
-        //NoOfMaleAndFemale
+        //Count the No Of MaleAndFemale
 //        Map<String,Long>noOfMaleAndFemale=employeeList.stream().collect(Collectors.groupingBy(Employee::getGender,Collectors.counting()));
 //        System.out.println(noOfMaleAndFemale);
 //
 //        //AverageOfMaleAndFemale
-//        Map<String,Double>avgOfMaleAndFemale=employeeList.stream().collect(Collectors.groupingBy(Employee::getGender,Collectors.averagingInt(Employee::getAge)));
-//        System.out.println(avgOfMaleAndFemale);
+        Map<String,Double>avgOfMaleAndFemale=employeeList.stream().collect(Collectors.groupingBy(Employee::getGender,Collectors.averagingInt(Employee::getAge)));
+        System.out.println(avgOfMaleAndFemale);
 //        employeeList.stream().map(Employee::getSalary ).filter(i-> i>22000.0).sorted().collect(Collectors.toList()).forEach(System.out::println);
-      Map<String,Double> avgSalary=employeeList.stream().collect(Collectors.groupingBy(Employee::getGender,Collectors.averagingDouble(Employee::getSalary)));
-        System.out.println(avgSalary);
+//      Map<String,Double> avgSalary=employeeList.stream().collect(Collectors.groupingBy(Employee::getGender,Collectors.averagingDouble(Employee::getSalary)));
+//        System.out.println(avgSalary);
 
+
+//Count the number of employee in each department
+
+//        Map<String,Long>l1= employeeList.stream().collect(Collectors.groupingBy(Employee::getDepartment,Collectors.counting()));
+//        System.out.println(l1);
+//Get the names of all employees who have joined after 2015?
+//       employeeList.stream().filter(i->i.yearOfJoining>2015).map(Employee::getName).forEach(System.out::println);
+//      Optional<String > str= employeeList.stream().findFirst().map(Employee::getName);
+//        System.out.println(str);
+
+//        Optional<Employee> e1=employeeList.stream().min(Comparator.comparing(Employee::getSalary));
+//        System.out.println(e1);
+//
+//        Map<String,Long>e4=employeeList.stream().collect(Collectors.groupingBy(Employee::getGender,Collectors.counting()));
+//        System.out.println(e4);
+//
+//        List<Integer> intId=employeeList.stream().map(Employee::getAge).collect(Collectors.toUnmodifiableList());
+//        System.out.println(intId);
+
+        double  avg=employeeList.stream().collect(Collectors.averagingDouble(Employee::getSalary));
+        System.out.println(avg);
 
 
     }
