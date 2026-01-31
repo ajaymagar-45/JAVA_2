@@ -101,6 +101,7 @@ public class Employee {
         employeeList.add(new Employee(266, "Sanvi Pandey", 26, "Female", "Product Development", 2015, 28900.0));
         employeeList.add(new Employee(277, "Anuj Chettiar", 31, "Male", "Product Development", 2012, 35700.0));
 
+
 //      Map<String, List<Employee>> itEmployees = employeeList.stream().filter(e -> "Sales And Marketing".equals(e.getDepartment())).filter(t->"Male".equals(t.getDepartment())).collect(Collectors.toList());
 
 //      System.out.println(itEmployees);
@@ -125,8 +126,8 @@ public class Employee {
 //        System.out.println(noOfMaleAndFemale);
 //
 //        //AverageOfMaleAndFemale
-        Map<String,Double>avgOfMaleAndFemale=employeeList.stream().collect(Collectors.groupingBy(Employee::getGender,Collectors.averagingInt(Employee::getAge)));
-        System.out.println(avgOfMaleAndFemale);
+//        Map<String,Double>avgOfMaleAndFemale=employeeList.stream().collect(Collectors.groupingBy(Employee::getGender,Collectors.averagingInt(Employee::getAge)));
+//        System.out.println(avgOfMaleAndFemale);
 //        employeeList.stream().map(Employee::getSalary ).filter(i-> i>22000.0).sorted().collect(Collectors.toList()).forEach(System.out::println);
 //      Map<String,Double> avgSalary=employeeList.stream().collect(Collectors.groupingBy(Employee::getGender,Collectors.averagingDouble(Employee::getSalary)));
 //        System.out.println(avgSalary);
@@ -150,8 +151,17 @@ public class Employee {
 //        List<Integer> intId=employeeList.stream().map(Employee::getAge).collect(Collectors.toUnmodifiableList());
 //        System.out.println(intId);
 
-        double  avg=employeeList.stream().collect(Collectors.averagingDouble(Employee::getSalary));
-        System.out.println(avg);
+//        double  avg=employeeList.stream().collect(Collectors.averagingDouble(Employee::getSalary));
+//        System.out.println(avg);
+//        employeeList.stream().filter(i->i.getSalary()>25000).collect(Collectors.toList()).forEach((e)-> System.out.println(e.getName()));
+//        System.out.println();
+//         employeeList.stream().filter(i->i.getAge()>=27).forEach(i-> System.out.println(i.getName()));
+//         Map<String,Map<Double,Map<String,List<Employee>>>> groupOfTwo= employeeList.stream().collect(Collectors.groupingBy(Employee::getName,Collectors.groupingBy(Employee::getSalary,Collectors.groupingBy(Employee::getDepartment))));
+//        System.out.println(groupOfTwo);
+        "Hello World!".chars().forEach(System.out::print);
+        "Hello World!".chars().forEach(i->System.out.println((char)i));
+
+
 
 
     }
