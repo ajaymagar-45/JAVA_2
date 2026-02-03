@@ -158,8 +158,10 @@ public class Employee {
 //         employeeList.stream().filter(i->i.getAge()>=27).forEach(i-> System.out.println(i.getName()));
 //         Map<String,Map<Double,Map<String,List<Employee>>>> groupOfTwo= employeeList.stream().collect(Collectors.groupingBy(Employee::getName,Collectors.groupingBy(Employee::getSalary,Collectors.groupingBy(Employee::getDepartment))));
 //        System.out.println(groupOfTwo);
-        "Hello World!".chars().forEach(System.out::print);
-        "Hello World!".chars().forEach(i->System.out.println((char)i));
+//        "Hello World!".chars().forEach(System.out::print);
+//        "Hello World!".chars().forEach(i->System.out.println((char)i));
+          employeeList.stream().filter(great->great.getSalary()>25000.00).forEach(System.out::println);
+
 
 
 
