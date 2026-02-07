@@ -88,7 +88,10 @@ public class Employee_1 {
 //        System.out.println(empList);
 //        List<String> nameOfEmployee=empList.stream().map(Employee_1::getName).collect(Collectors.toList());
 //        System.out.println(nameOfEmployee);
-         empList.stream().filter(emp->emp.getDepartment().equals("IT")).map(Employee_1::getName).forEach(System.out::println);
+//         empList.stream().filter(emp->emp.getDepartment().equals("IT")).map(Employee_1::getName).forEach(System.out::println);
+
+          empList.stream().map(Employee_1::getDepartment).forEach(System.out::println);
+
 
 
 
