@@ -10,6 +10,7 @@ public class Employee_1 {
     String name;
     String department;
     double salary;
+
     public Employee_1(int id,String name,String department,double salary)
     {
         this.id=id;
@@ -91,6 +92,7 @@ public class Employee_1 {
 //         empList.stream().filter(emp->emp.getDepartment().equals("IT")).map(Employee_1::getName).forEach(System.out::println);
 
          empList.stream().map(Employee_1::getDepartment).forEach(System.out::println);
+
 
 
 

@@ -109,8 +109,8 @@ public class Employee {
 //        employeeList.stream().filter(a->a.getDepartment().
 //                equals("Sales And Marketing") && a.getGender().equals("Male")).
 //                forEach(System.out::println);
-//        employeeList.stream()
-//
+//        employeeList.stream().
+////
 //                .filter(e->"Hr")
 //                .distinct()
 //                .forEach(System.out::println);
@@ -124,7 +124,7 @@ public class Employee {
         //Count the No Of MaleAndFemale
 //        Map<String,Long>noOfMaleAndFemale=employeeList.stream().collect(Collectors.groupingBy(Employee::getGender,Collectors.counting()));
 //        System.out.println(noOfMaleAndFemale);
-//
+////
 //        //AverageOfMaleAndFemale
 //        Map<String,Double>avgOfMaleAndFemale=employeeList.stream().collect(Collectors.groupingBy(Employee::getGender,Collectors.averagingInt(Employee::getAge)));
 //        System.out.println(avgOfMaleAndFemale);
@@ -160,8 +160,8 @@ public class Employee {
 //        System.out.println(groupOfTwo);
 //        "Hello World!".chars().forEach(System.out::print);
 //        "Hello World!".chars().forEach(i->System.out.println((char)i));
-          employeeList.stream().filter(great->great.getSalary()>25000.00).forEach(System.out::println);
-
+//
+        employeeList.stream().filter(i->i.getSalary()>25000.00).map(Employee::getName).forEach(System.out::println);
 
 
 
