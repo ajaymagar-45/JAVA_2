@@ -19,11 +19,14 @@ public class EmployeeStreamOperations {
         //Find employee from specific city and get the count
       long count=  employees.stream().filter(i->i.getCity().equals("Pune")).count();
         System.out.println("Employee's from pune : "+ count);
+        System.out.println("->->->->->->->->->->->->->->->->");
 
        //2.Find employee where salary is greater than a particular amount
-        employees.stream().filter(i->i.getSalary()>12000).forEach(System.out::println);
+//       employees.stream().filter(i->i.getSalary()>20000).forEach(System.out::println);
 
         //3 Print all Employee name in uppercase
+        employees.stream().map(e->e.getEmpName().toUpperCase()).forEach(System.out::println);
+
 
     }
 }

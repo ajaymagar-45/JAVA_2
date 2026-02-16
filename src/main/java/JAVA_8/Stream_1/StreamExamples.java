@@ -36,7 +36,7 @@ public class StreamExamples {
 
         // 6. Find first element starting with a specific letter (e.g., 'b')
 //        List<String> withprefix=ll.stream().filter(i->i!=null && i.startsWith("b")).collect(Collectors.toList());
-//        System.out.println(withprefix);
+//        System.out.println(withPrefix);
 
         // 7. Get the length of each string
 //        List<Integer> lengthOfEachStringElement=ll.stream().filter(Objects::nonNull).map(String::length).collect(Collectors.toList());
