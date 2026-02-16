@@ -75,6 +75,8 @@ public class Employee_1 {
         empList.add(new Employee_1(167,"Ganesh Shinde","Executor Head",85000.00));
         empList.add(new Employee_1(187,"Prathemesh Deshmukh","IT",65000.00));
         empList.add(new Employee_1(189,"Karan Yadav","Support",35000.00));
+        empList.add(new Employee_1(189,"Karan Yadav","Support",35000.00));
+
 
 
 //        empList.stream().filter(i->i.salary>60000.00).collect(Collectors.toList()).forEach(System.out::println);
@@ -90,8 +92,30 @@ public class Employee_1 {
 //        List<String> nameOfEmployee=empList.stream().map(Employee_1::getName).collect(Collectors.toList());
 //        System.out.println(nameOfEmployee);
 //         empList.stream().filter(emp->emp.getDepartment().equals("IT")).map(Employee_1::getName).forEach(System.out::println);
-        empList.stream().filter(i->i.getSalary()==65000).forEach(System.out::println);
-        empList.stream().map(Employee_1::getId).distinct().forEach(System.out::println);
+//        empList.stream().map(Employee_1::getName).filter(i->i.startsWith("P")).forEach(System.out::println);
+//        empList.stream().forEach(System.out::println);
+//        System.out.println("-> ->-> ->-> ->");
+//
+//        empList.stream().map(Employee_1::getId).distinct().forEach(System.out::println);
+//        empList.stream().filter(i->i.getSalary()>65000).forEach(System.out::println);
+
+        //Find element which is having duplicate key
+//        empList.stream().map(Employee_1::getId).distinct().forEach(System.out::println);
+
+        //Find element which is having salary greater than 65000
+//        empList.stream().filter(i->i.getSalary()>65000).forEach(System.out::println);
+//        System.out.println(" ");
+        //Get employee from specifiv department
+        empList.stream().filter(i->i.getDepartment().equals("IT")).forEach(System.out::println);
+        empList.stream().map(Employee_1::getName).filter(i->i.startsWith("R")).forEach(System.out::println);
+        int arr[]={10,20,67,93,748,88};
+        int arr1[]=Arrays.copyOf(arr,3);
+        System.out.println(Arrays.toString(arr1));
+
+
+
+
+
 
 
 

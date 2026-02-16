@@ -56,6 +56,7 @@ public class Employee {
         this.department = department;
     }
 
+
     @Override
     public String toString() {
         return "EmployeeName : "+empName+
@@ -64,5 +65,6 @@ public class Employee {
                 " City : "+city+
                 " Department :"+department;
     }
+
 
 }

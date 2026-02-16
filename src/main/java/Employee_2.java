@@ -89,7 +89,7 @@ public class Employee_2 {
 
         emp.add(new Employee_2(145,"Shruti Kadam",95000.00,"IT",LocalDate.of(2020,6,16),"Mumbai"));
 
-        emp.add(new Employee_2(167,"Nilesh Sisodiya",45000.00,"Suppor",LocalDate.of(2017,6,15),"Chennai"));
+        emp.add(new Employee_2(167,"Nilesh Sisodiya",45000.00,"Support",LocalDate.of(2017,6,15),"Chennai"));
 
 //        emp.stream().map(Employee_2::getDepartment).filter(i->i.length()>2).forEach(System.out::println);
         for(Object s:emp)
