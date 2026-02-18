@@ -6,6 +6,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 public class CopyOnArrayListDemo {
     public static void main(String[] args) {
+
         ArrayList ll=new ArrayList();
         ll.add(10);
         ll.add("A");
