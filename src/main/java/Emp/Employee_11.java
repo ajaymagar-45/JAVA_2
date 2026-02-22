@@ -1,10 +1,8 @@
 package Emp;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class Employee_11
 {
@@ -124,6 +122,21 @@ public String toString()
             System.out.println(entry.getKey() + " : " + entry.getValue());
         }
     }
+    public static List<Integer> findMissing(int[] arr) {
+
+        int min = Arrays.stream(arr).min().orElse(0);
+        int max = Arrays.stream(arr).max().orElse(0);
+
+        Set<Integer> set = Arrays.stream(arr)
+                .boxed()
+                .collect(Collectors.toSet());
+
+        return IntStream.rangeClosed(min, max)
+                .filter(i -> !set.contains(i))
+                .boxed()
+                .collect(Collectors.toList());
+    }
+
 
 
 
@@ -151,8 +164,39 @@ public String toString()
         employeeList.add(new Employee_11(277, "Anuj Chettiar", 31, "Male", "Product Development", 2012, 35700.0));
 //        System.out.println(maleFemale(employeeList));
 //        System.out.println(nameOfAllDepartement(employeeList));
-        System.out.println(avgAge(employeeList));
-        System.out.println(employeeJoinedAfter_2015(employeeList));
+//        System.out.println(avgAge(employeeList));
+//
+//
+//        System.out.println(employeeJoinedAfter_2015(employeeList));
+       List<Employee_11> e= employeeList.stream().filter(i->i.getSalary()>18000).collect(Collectors.toList());
+//        System.out.println(e);
+        //sort key
+       employeeCountByDepartment(employeeList);
+       maleFemale(employeeList);
+
+
+        Map<Integer,Integer>map=new HashMap();
+     map.put(1,10);
+     map.put(45,90);
+     map.put(37,100);
+     map.put(9,180);
+     map.put(6,10);
+//        System.out.println(map.keySet());
+//    Map<Integer,Integer>map1=new TreeMap<>(map);
+//        System.out.println(map1.keySet());
+        List<Integer> list1 = Arrays.asList(1, 2, 3, 4, 5);
+
+        List<Integer> list2 = Arrays.asList(2, 4);
+        List<Integer> misssing=list1.stream().filter(i->!list2.contains(i)).collect(Collectors.toList());
+//        System.out.println(misssing);
+
+//        int arr[]={1,2,8,9,384};
+//        int a=10;
+//        int b=20;
+//        System.out.println(a >> b);
+
+
+
 
 
 
