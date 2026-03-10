@@ -1,3 +1,5 @@
+package com.extra;
+
 import java.util.Optional;
 
 public class OptionalClass {

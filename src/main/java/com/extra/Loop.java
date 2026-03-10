@@ -1,3 +1,5 @@
+package com.extra;
+
 public class Loop {
     public static void main(String[] args) {
 //Square Pattern program

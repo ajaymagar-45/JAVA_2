@@ -1,4 +1,4 @@
-import java.util.Arrays;
+package com.extra;
 
 public class ArraySort {
     static void mn(){
