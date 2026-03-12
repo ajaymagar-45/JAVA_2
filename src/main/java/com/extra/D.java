@@ -1,3 +1,5 @@
+package com.extra;
+
 public class D {
     int id;
     String name;

@@ -1,3 +1,5 @@
+package com.extra;
+
 interface Itr{
     int a(int i);
     default void aa(){}

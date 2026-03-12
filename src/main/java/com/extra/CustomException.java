@@ -1,3 +1,5 @@
+package com.extra;
+
 // Step 1: Create a custom exception class
 class InvalidAgeException extends Exception {
     public InvalidAgeException(String message) {

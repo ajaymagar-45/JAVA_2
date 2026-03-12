@@ -1,3 +1,5 @@
+package com.extra;
+
 public class Pattern {
 
     public static  void main(String[] args)

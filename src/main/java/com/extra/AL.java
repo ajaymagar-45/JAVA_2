@@ -1,8 +1,6 @@
+package com.extra;
+
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Vector;
-import java.util.stream.*;
 
 public class AL {
     public static void main(String[] args) {

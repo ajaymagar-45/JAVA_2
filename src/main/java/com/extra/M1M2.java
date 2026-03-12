@@ -1,3 +1,5 @@
+package com.extra;
+
 public class M1M2 {
      static void  a(){
         b();
