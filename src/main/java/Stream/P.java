@@ -6,12 +6,14 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class P {
 
 
     public static void main(String[] args) {
         List<Integer> al= Arrays.asList(10,10,20,20,40,50,50,60,87);
+
         //1.filter() used to filter data
 //        al.stream().filter(i->i>20).forEach(System.out::println);
 
