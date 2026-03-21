@@ -1,8 +1,6 @@
 package com.extra;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class Unmodify {
     public static void main(String[] args) {
@@ -19,22 +17,32 @@ public class Unmodify {
 //        System.out.println("After Modification : "+l);} catch (Exception e) {
 //            System.out.println(e.getMessage());
 //        }
-        List l2=new ArrayList();
-        l2.add(1);
-        l2.add(2);
-        l2.add(4);
+//        List l2=new ArrayList();
+//        l2.add(1);
+//        l2.add(2);
+//        l2.add(4);
+//
+//        List l3=List.of(l2);
+//        l2.add(23);
+//        System.out.println("Trying to modify collection through immutable list :"+l3);
+//        List l4= Collections.unmodifiableList(l2);
+//        l2.add(1000);
+//        System.out.println("After modification by unmodifiableList:"+l4);
+//
+//        List l6= List.of(10,"A",10);
+//        System.out.println(l6);
+//        System.out.println("If we try to modify list.of or unmodifiable list instead of the original it will raise an exception .And we can modify original collection in both cases" +
+//                " ");
 
-        List l3=List.of(l2);
-        l2.add(23);
-        System.out.println("Trying to modify collection through immutable list :"+l3);
-        List l4= Collections.unmodifiableList(l2);
-        l2.add(1000);
-        System.out.println("After modification by unmodifiableList:"+l4);
+        Map map=new HashMap();
+        System.out.println(map);
+        HashSet set=new HashSet();
+        set.add(null);
+        set.add("Ajay");
+        set.add(null);
+        System.out.println(set);
+        System.out.println(set.size());
 
-        List l6= List.of(10,"A",10);
-        System.out.println(l6);
-        System.out.println("If we try to modify list.of or unmodifiable list instead of the original it will raise an exception .And we can modify original collection in both cases" +
-                " ");
 
 
     }

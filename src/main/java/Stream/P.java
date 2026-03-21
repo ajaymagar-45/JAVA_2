@@ -30,8 +30,9 @@ public class P {
         //5.limit
 //        al.stream().limit(2).forEach(System.out::println);
 
-        //6.skip
-//        al.stream().skip(2).forEach(System.out::println);
+
+       // 6.skip
+        al.stream().skip(2).forEach(System.out::println);
         //7.count
 //        long a=al.stream().count();
 //        System.out.println(a);
@@ -63,7 +64,7 @@ public class P {
         //15.groupingBy
 //        Map<Integer,List<Integer>>m=al.stream().collect(Collectors.groupingBy(i->i*10));
 //        System.out.println(m);
-        //16.partialGrouping
+        //16.partitioningBy
         Map<Boolean,List<Integer>>pb=al.stream().collect(Collectors.partitioningBy(i->i>40));
         System.out.println(pb);
         //17.averagingInt
